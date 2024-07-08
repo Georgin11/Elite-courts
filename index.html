@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Courts - Premium Indoor Sports Facilities</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -34,7 +35,16 @@
     </section>
 
     <section class="features">
-        <div class="container">
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="assets/court1.jpg" alt="Court Image 1" class="active">
+                <img src="assets/court2.jpg" alt="Court Image 2">
+                <img src="assets/court3.jpg" alt="Court Image 3">
+            </div>
+            <button class="carousel-control prev">&lt;</button>
+            <button class="carousel-control next">&gt;</button>
+        </div>
+        <div class="feature-container">
             <div class="feature">
                 <img src="assets/game-icon.png" alt="Get in the Game">
                 <h2>Get in the Game</h2>
