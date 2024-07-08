@@ -1,14 +1,15 @@
 let currentIndex = 0;
-const images = document.querySelectorAll('.carousel-images img');
+
+const images = document.querySelectorAll('.carousel-images img, .carousel-video');
 const totalImages = images.length;
 
-document.querySelector('.carousel-control.next').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % totalImages;
+document.querySelector('.carousel-control.prev').addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
     updateCarousel();
 });
 
-document.querySelector('.carousel-control.prev').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+document.querySelector('.carousel-control.next').addEventListener('click', () => {
+    currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
     updateCarousel();
 });
 
@@ -17,18 +18,14 @@ function updateCarousel() {
     document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
 }
 
-// Google Sign-In
 function onSignIn(googleUser) {
     const profile = googleUser.getBasicProfile();
     document.getElementById('review-form').style.display = 'block';
-    document.querySelector('.g-signin2').style.display = 'none';
 }
 
-// Add sign-out functionality if needed
-function signOut() {
-    const auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(() => {
-        document.getElementById('review-form').style.display = 'none';
-        document.querySelector('.g-signin2').style.display = 'block';
-    });
-}
+document.getElementById('review-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const reviewText = this.querySelector('textarea').value;
+    console.log('Review submitted:', reviewText);
+    this.reset();
+});
