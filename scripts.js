@@ -1,6 +1,6 @@
 let currentIndex = 0;
 
-const images = document.querySelectorAll('.carousel-images img, .carousel-video iframe');
+const images = document.querySelectorAll('.carousel-images img, .carousel-video');
 const totalImages = images.length;
 
 document.querySelector('.carousel-control.prev').addEventListener('click', () => {
@@ -18,19 +18,12 @@ function updateCarousel() {
     document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
 }
 
-function onSignIn(googleUser) {
-    const profile = googleUser.getBasicProfile();
-    document.getElementById('review-form').style.display = 'block';
-}
-
 document.getElementById('review-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const reviewText = this.querySelector('textarea').value;
-    if (reviewText.trim() !== "") {
-        const reviewSummary = document.getElementById('review-summary');
-        const newReview = document.createElement('p');
-        newReview.textContent = reviewText;
-        reviewSummary.appendChild(newReview);
-        this.reset(); // Clear the form
-    }
+    const reviewSummary = document.querySelector('.review-summary');
+    const newReview = document.createElement('p');
+    newReview.textContent = reviewText;
+    reviewSummary.appendChild(newReview);
+    this.reset();
 });
