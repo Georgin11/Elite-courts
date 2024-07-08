@@ -167,10 +167,13 @@ header nav ul li a:hover {
 
 /* Features Section */
 .features {
-    background: #2e2e2e;
+    background: rgba(46, 46, 46, 0.8); /* Add background image with less opacity */
     color: #fff;
     padding: 50px 0;
     text-align: center;
+    background-image: url('assets/background.jpg'); /* Update with the correct image path */
+    background-size: cover;
+    background-position: center;
 }
 
 .features .feature-container {
@@ -182,7 +185,7 @@ header nav ul li a:hover {
     width: 30%;
     margin: 20px;
     text-align: left;
-    background: #333;
+    background: rgba(51, 51, 51, 0.8); /* Use less opacity */
     padding: 20px;
     border-radius: 5px;
     position: relative;
@@ -218,26 +221,10 @@ header nav ul li a:hover {
 
 /* Info Section */
 .info {
-    background: url('assets/basketball-court2.jpg') no-repeat center center/cover;
-    position: relative;
+    background: #000;
     color: #fff;
     padding: 50px 0;
     text-align: center;
-}
-
-.info .info-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Reduce opacity for background image */
-    z-index: 1;
-}
-
-.info .container {
-    position: relative;
-    z-index: 2;
 }
 
 .info .info-item {
@@ -323,23 +310,22 @@ footer {
     text-align: center;
 }
 
-.footer-info {
+footer .footer-info {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 20px;
 }
 
-.footer-info .contact-info {
-    text-align: left;
-    margin-right: 20px;
+footer .footer-info div {
+    width: 45%; /* Adjusted the width */
 }
 
-.footer-info h4 {
+footer h4 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.footer-info p {
+footer p {
     font-size: 16px;
 }
 
