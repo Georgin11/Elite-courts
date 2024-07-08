@@ -99,6 +99,20 @@ header nav ul li a:hover {
     background: #C43D30;
 }
 
+/* About Section */
+.about {
+    background: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.about p {
+    font-size: 18px;
+    margin: 0 auto;
+    width: 80%;
+}
+
 /* Carousel Section */
 .carousel {
     position: relative;
