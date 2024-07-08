@@ -54,7 +54,7 @@ header nav ul li a:hover {
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('assets/court.jpg') no-repeat center center/cover;
+    background: url('assets/basketball-court.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 100px 0;
