@@ -227,6 +227,11 @@ header nav ul li a:hover {
     text-align: center;
 }
 
+.info .container {
+    display: flex;
+    justify-content: space-around;
+}
+
 .info .info-item {
     width: 22%;
     margin: 20px 0;
