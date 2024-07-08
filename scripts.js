@@ -1,6 +1,6 @@
 let currentIndex = 0;
 
-const images = document.querySelectorAll('.carousel-images img, .carousel-video');
+const images = document.querySelectorAll('.carousel-images img, .carousel-video iframe');
 const totalImages = images.length;
 
 document.querySelector('.carousel-control.prev').addEventListener('click', () => {
@@ -26,6 +26,11 @@ function onSignIn(googleUser) {
 document.getElementById('review-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const reviewText = this.querySelector('textarea').value;
-    console.log('Review submitted:', reviewText);
-    this.reset();
+    if (reviewText.trim() !== "") {
+        const reviewSummary = document.getElementById('review-summary');
+        const newReview = document.createElement('p');
+        newReview.textContent = reviewText;
+        reviewSummary.appendChild(newReview);
+        this.reset(); // Clear the form
+    }
 });
