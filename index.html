@@ -50,7 +50,7 @@
             <img src="assets/court4.jpg" alt="Court 4">
             <img src="assets/court5.jpg" alt="Court 5">
             <div class="carousel-video">
-               <iframe width="700" height="394" src="https://www.youtube.com/embed/g2keUlYN6Ms" frameborder="0" allowfullscreen></iframe>
+                <iframe width="700" height="315" src="https://www.youtube.com/embed/g2keUlYN6Ms" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
         <button class="carousel-control next">&gt;</button>
@@ -108,7 +108,7 @@
         <div class="container">
             <h2>Customer Reviews</h2>
             <div class="reviews-container">
-                <div class="review-summary">
+                <div class="review-summary" id="review-summary">
                     <h3>Review summary</h3>
                     <p>"I recently had the pleasure of playing basketball at the new court. The court looks amazing with freshly painted lines and a perfectly level playing surface."</p>
                     <p>"Very clean and spacious! The location is central right off the highway. 4 full courts and a half. Basketball and volleyball are available. The go to spot from now on."</p>
@@ -118,8 +118,8 @@
                     <h3>Write a review</h3>
                     <div class="g-signin2" data-onsuccess="onSignIn"></div>
                     <form id="review-form" style="display: none;">
-                        <textarea placeholder="Write your review here..."></textarea>
-                        <button type="submit">Post</button>
+                        <textarea id="review-text" placeholder="Write your review here..."></textarea>
+                        <button type="button" onclick="postReview()">Post</button>
                     </form>
                 </div>
             </div>
