@@ -221,7 +221,7 @@ header nav ul li a:hover {
 
 /* Info Section */
 .info {
-    background: #000;
+    background: url('assets/basketball-court2.jpg') no-repeat center center/cover;
     color: #fff;
     padding: 50px 0;
     text-align: center;
